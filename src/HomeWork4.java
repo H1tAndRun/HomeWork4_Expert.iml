@@ -63,7 +63,7 @@ public class HomeWork4 {
             Outcom += Double.parseDouble(x[2]);
         }
         Double result=Income-Outcom;
-        System.out.printf( name+":"+"%.2f",result);
+        System.out.printf( name.replace("_",".")+":"+"%.2f",result);
         System.out.println();
     }
 
@@ -74,10 +74,11 @@ public class HomeWork4 {
     }
 
     public static void Exercise2() throws IOException {
-        Pyterochka pyterochka=new Pyterochka();
-        Perekrestok perekrestok=new Perekrestok();
-        Okey okey=new Okey();
-        Ydoma ydoma=new Ydoma();
+        Shop pyterochka =new Shop("pyterochka");
+        Shop perekrestok =new Shop("perekrestok");
+        Shop okey =new Shop("Okey");
+        Shop ydoma=new Shop("ydoma");
+
 
      File file[]= getFilesPath();
         for (int i = 0; i < file.length; i++) {
@@ -105,7 +106,7 @@ public class HomeWork4 {
         shops.add(ydoma);
         shops.add(perekrestok);
         for (Shop s:shops){
-            System.out.printf(s.ShowExpenses()+"%.2f",s.Outcom);
+            System.out.printf("Расходы "+s.name+" за весь период : "+"%.2f",s.Outcom);
             System.out.println();
         }
     }
