@@ -49,7 +49,7 @@ public class HomeWork4 {
                     Shop5.add(readLine);
                 }
             }
-            IncomePyterochka(Shop5, FilesList[i].getName().toString().substring(7,14));
+            IncomePyterochka(Shop5, FilesList[i].getName().substring(7,14));
         }
         System.out.println("\n");
     }
